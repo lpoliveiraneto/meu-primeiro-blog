@@ -3,21 +3,13 @@
 		<title>Django Teste</title>
 	</head>
 	<body>
+	{% for post in posts %}
 		<div>
-			<h1><a href= "">Django Teste </a></h1>			
+			<p>published: {{post.published_date}}</p>
+			<h1><a href= "">{{ post.title }}</a></h1>			<p>{{ post.text|linebreaks }}</p>
 		</div>
+		{% endfor}
 
-		<div>
-			<p> publicado: 14.08.2012, 12:40</p>
-			<h2><a href="">Meu primeiro Post </a></h2>
-			<p>Este post é apenas escrito para teste do Django.</p>
-		</div>
-
-		<div>
-			<p> publicado: 15.08.2015, 12:40</p>
-			<h2><a href="">Meu segundo Post </a></h2>
-			<p>Este post é apenas para testa o html com Django</p>
-		</div>
-
+		
 	</body>
 </html>
